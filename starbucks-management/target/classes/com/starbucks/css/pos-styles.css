@@ -1,0 +1,64 @@
+/* * File: pos-styles.css
+ * -----------------------------------------------------------
+ */
+
+.root {
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+    -fx-background-color: #F8F8F8;
+}
+
+/* Nút HOT ESP / ICED ESP */
+.menu-button {
+    -fx-background-color: #00704A;
+    -fx-text-fill: white;
+    -fx-font-size: 16pt; 
+    -fx-font-weight: bold;
+    -fx-border-radius: 0; 
+    -fx-background-radius: 0; 
+    -fx-alignment: CENTER;
+}
+
+/* Nút Sản phẩm:*/
+.product-button {
+    -fx-background-color: #00704A;
+    -fx-text-fill: white;
+    -fx-font-size: 10pt; 
+    -fx-font-weight: normal;
+    -fx-min-height: 100px; 
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px; 
+    -fx-alignment: CENTER; 
+    -fx-text-align-CENTER: center; 
+    -fx-wrap-text: false; 
+    -fx-padding: 2 5 2 5;
+}
+
+/* Base class cho các nút chức năng (4 nút dưới cùng) */
+.pos-button {
+    -fx-font-size: 14pt; 
+    -fx-font-weight: bold;
+    -fx-min-height: 50px; 
+    -fx-border-radius: 5; 
+    -fx-background-radius: 10;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+    -fx-wrap-text: true; 
+}
+
+/* Nút Clear All/Void */
+.clear-void-button {
+    -fx-background-color: #D32F2F;
+    -fx-text-fill: white;
+}
+
+/* Nút EXIT  */
+.exit-button {
+    -fx-background-color: #757575; 
+    -fx-text-fill: white;
+}
+
+/* Nút Thanh Toán  */
+.func-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}

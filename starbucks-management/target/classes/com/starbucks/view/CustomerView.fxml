@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="700.0" prefWidth="1000.0" spacing="10.0" style="-fx-background-color: #F8F8F8;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.starbucks.controller_fx.CustomerListController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <Label text="Quản Lý Khách Hàng (Customer Relationship Management)" textFill="#006400">
+      <font>
+         <Font name="System Bold" size="24.0" />
+      </font>
+   </Label>
+   <HBox spacing="10.0">
+      <VBox.margin>
+         <Insets top="10.0" />
+      </VBox.margin>
+      <TextField fx:id="searchField" onAction="#handleSearch" prefHeight="35.0" prefWidth="300.0" promptText="Tìm kiếm theo Tên hoặc Số điện thoại" style="-fx-border-color: #006400; -fx-border-radius: 5;" />
+      <Button onAction="#handleSearch" prefHeight="35.0" style="-fx-background-color: #006400; -fx-text-fill: white;" text="Tìm Kiếm" />
+      <Button onAction="#handleBack" prefHeight="35.0" style="-fx-background-color: #A9A9A9; -fx-text-fill: white;" text="&lt; Quay lại Menu" />
+   </HBox>
+   <SplitPane dividerPositions="0.4" VBox.vgrow="ALWAYS">
+      <VBox prefWidth="400.0">
+         <Label text="Danh Sách Khách Hàng" textFill="#006400">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+            <VBox.margin>
+               <Insets bottom="5.0" />
+            </VBox.margin>
+         </Label>
+         <TableView fx:id="customerTable" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="nameCol" prefWidth="150.0" text="Tên Khách Hàng" />
+               <TableColumn fx:id="lastOrderCol" prefWidth="150.0" text="Đơn Hàng Gần Nhất" />
+               <TableColumn fx:id="pointsCol" prefWidth="100.0" text="Điểm Thưởng" />
+            </columns>
+         </TableView>
+      </VBox>
+      <VBox spacing="10.0">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <Label text="Chi Tiết &amp; Lịch Sử Mua Hàng" textFill="#006400">
+            <font>
+               <Font name="System Bold" size="18.0" />
+            </font>
+         </Label>
+         <Label fx:id="customerDetailLabel" prefHeight="100.0" prefWidth="400.0" style="-fx-border-color: lightgray; -fx-padding: 10;" text="Chọn một khách hàng để xem chi tiết." wrapText="true">
+            <font>
+               <Font size="14.0" />
+            </font>
+         </Label>
+         <Label text="Lịch Sử Giao Dịch" textFill="#006400">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <TableView fx:id="historyTable" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+            <columns>
+               <TableColumn fx:id="orderDateCol" prefWidth="150.0" text="Ngày" />
+               <TableColumn fx:id="orderTotalCol" prefWidth="100.0" text="Tổng Tiền" />
+               <TableColumn fx:id="orderItemsCol" prefWidth="300.0" text="Sản Phẩm" />
+            </columns>
+         </TableView>
+      </VBox>
+   </SplitPane>
+</VBox>
